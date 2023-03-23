@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="calcicon.png" type="image/png">
+    <title>Calculadora rescisão</title>
+</head>
+<body>
+    <header> 
+        <!--Cabeçalho-->
+        <h1>Calcule o valor de sua rescisão</h1>
+        
+        <p class="informe">Informe nos campos abaixo, os valores de acordo com a sua situação.<br></p>
+        
+        <p class="lembrete">**Lembre-se que os valores aqui calculados, são apenas uma base e podem não refletir com exatidão!!!**</p>
+    </header>
+    <br>
+    <br>
+    <br>
+    <article>
+
+        
+        
+        <!--Calculo dias Trabalhados-->
+        <div class="CalcDiasTrabalhados"> 
+            
+            <h2>Cálculo dos dias trabalhados:</h2>
+
+            <input type="number" id="salbase">
+            <input type="number" id="diastrab">
+            <input type="number" id="resultado-dias-trabalhados" disabled>
+        
+            <button onclick=diasTrabalhados()>Calcular</button>
+        </div>
+
+        <br>
+
+        <!--Calculo 13º proporcional-->
+        <div class="CalcDiasTrabalhados"> 
+            
+            <h2>Cálculo 13º proporcional:</h2>
+
+            
+            <input type="number" id="avos13">
+            <input type="number" id="resultado-13" disabled>
+        
+            <button onclick=dectercproporcional()>Calcular</button>
+        </div>
+        
+        <br>
+        <!--Calculo de férias-->
+        <div class="Calcferias"> 
+            
+            <h2>Cálculo de férias:</h2>
+
+            <input type="number" id="avosferias">
+            <input type="number" id="resultado-ferias" disabled>
+        
+            <button onclick=ferias()>Calcular</button>
+        </div>
+
+        <br>
+
+        <!--Calculo de terço férias-->
+        <div class="CalcTercferias"> 
+            
+            <h2>Cálculo de terço de férias:</h2>
+
+            <input type="number" id="resultado-terc-ferias" disabled>
+        
+            <button onclick=tercferias()>Calcular</button>
+        </div>
+
+
+    </article>
+<script src="app.js"></script>
+
+</body>
+</html>
