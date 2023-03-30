@@ -25,58 +25,75 @@
 
         
         
-        <!--Calculo dias Trabalhados-->
+        <!--DIAS TRABALHADOS-->
         <div class="CalcDiasTrabalhados"> 
             
-            <h2>Cálculo dos dias trabalhados:</h2>
+            <h2>Dias trabalhados:</h2>
 
             <input type="number" id="salbase" placeholder="Salário Base">
             <input type="number" id="diastrab" placeholder="Dias trabalhados">
             <input type="number" id="resultado-dias-trabalhados" placeholder="Resultado" disabled>
         
-            <button onclick=diasTrabalhados()>Calcular</button>
+           
         </div>
 
         <br>
 
-        <!--Calculo 13º proporcional-->
+        <!--13º PROPORCIONAL-->
         <div class="CalcDiasTrabalhados"> 
             
-            <h2>Cálculo 13º proporcional:</h2>
+            <h2>13º proporcional:</h2>
 
             
             <input type="number" id="avos13" placeholder="Meses de 13º salário">
             <input type="number" id="resultado-13" placeholder="Resultado" disabled>
         
-            <button onclick=dectercproporcional()>Calcular</button>
+           
         </div>
         
         <br>
-        <!--Calculo de férias-->
+        <!--FERIAS PROPORCIONAL-->
         <div class="Calcferias"> 
             
-            <h2>Cálculo de férias:</h2>
+            <h2>Férias:</h2>
 
             <input type="number" id="avosferias" placeholder="Meses de férias">
             <input type="number" id="resultado-ferias" placeholder="Resultado" disabled>
         
-            <button onclick=ferias()>Calcular</button>
+            
         </div>
 
         <br>
 
-        <!--Calculo de terço férias-->
+        <!--TERÇO DE FERIAS-->
         <div class="CalcTercferias"> 
             
-            <h2>Cálculo de terço de férias:</h2>
+            <h2>1/3 Férias:</h2>
 
             <input type="number" id="resultado-terc-ferias" placeholder="Resultado" disabled>
         
-            <button onclick=tercferias()>Calcular</button>
+           
         </div>
+        <br>
+
+        <!--FERIAS VENCIDAS-->
+        <div class="veriasVencidas"> 
+            
+            <h2>Férias Vencidas:</h2>
+
+            <input type="number" id="quantidade-ferias-vencida" placeholder="Resultado">
+            <input type="number" id="resultado-ferias-vencida" placeholder="Resultado" disabled>
+        
+            
+        </div>
+
+        <br>
+
+        <button onclick=calcular()>Calcular</button>
 
 
     </article>
+    
 <script src="app.js"></script>
 
 </body>
