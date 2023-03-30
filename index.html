@@ -22,75 +22,112 @@
     <br>
     <br>
     <article>
+        <section class="vencimentos">
+            <h2>Vencimentos</h2> 
+                       
+            <br>
 
-        
-        
-        <!--DIAS TRABALHADOS-->
-        <div class="CalcDiasTrabalhados"> 
+            <!--DIAS TRABALHADOS-->
+            <div class="CalcDiasTrabalhados"> 
+                
+                <h2>Dias trabalhados:</h2>
+
+                <input type="number" id="salbase" placeholder="Salário Base">
+                <input type="number" id="diastrab" placeholder="Dias trabalhados">
+                <input type="number" id="resultado-dias-trabalhados" placeholder="Resultado" disabled>
             
-            <h2>Dias trabalhados:</h2>
-
-            <input type="number" id="salbase" placeholder="Salário Base">
-            <input type="number" id="diastrab" placeholder="Dias trabalhados">
-            <input type="number" id="resultado-dias-trabalhados" placeholder="Resultado" disabled>
-        
-           
-        </div>
-
-        <br>
-
-        <!--13º PROPORCIONAL-->
-        <div class="CalcDiasTrabalhados"> 
             
-            <h2>13º proporcional:</h2>
+            </div>
 
+            <br>
+
+            <!--13º PROPORCIONAL-->
+            <div class="CalcDiasTrabalhados"> 
+                
+                <h2>13º proporcional:</h2>
+
+                
+                <input type="number" id="avos13" placeholder="Meses de 13º salário">
+                <input type="number" id="resultado-13" placeholder="Resultado" disabled>
             
-            <input type="number" id="avos13" placeholder="Meses de 13º salário">
-            <input type="number" id="resultado-13" placeholder="Resultado" disabled>
-        
-           
-        </div>
-        
-        <br>
-        <!--FERIAS PROPORCIONAL-->
-        <div class="Calcferias"> 
             
-            <h2>Férias:</h2>
-
-            <input type="number" id="avosferias" placeholder="Meses de férias">
-            <input type="number" id="resultado-ferias" placeholder="Resultado" disabled>
-        
+            </div>
             
-        </div>
+            <br>
+            <!--FERIAS PROPORCIONAL-->
+            <div class="Calcferias"> 
+                
+                <h2>Férias:</h2>
 
-        <br>
-
-        <!--TERÇO DE FERIAS-->
-        <div class="CalcTercferias"> 
+                <input type="number" id="avosferias" placeholder="Meses de férias">
+                <input type="number" id="resultado-ferias" placeholder="Resultado" disabled>
             
-            <h2>1/3 Férias:</h2>
+                
+            </div>
 
-            <input type="number" id="resultado-terc-ferias" placeholder="Resultado" disabled>
-        
-           
-        </div>
-        <br>
+            <br>
 
-        <!--FERIAS VENCIDAS-->
-        <div class="veriasVencidas"> 
+            <!--TERÇO DE FERIAS-->
+            <div class="CalcTercferias"> 
+                
+                <h2>1/3 Férias:</h2>
+
+                <input type="number" id="resultado-terc-ferias" placeholder="Resultado" disabled>
             
-            <h2>Férias Vencidas:</h2>
-
-            <input type="number" id="quantidade-ferias-vencida" placeholder="Resultado">
-            <input type="number" id="resultado-ferias-vencida" placeholder="Resultado" disabled>
-        
             
-        </div>
+            </div>
+            <br>
 
+            <!--FERIAS VENCIDAS-->
+            <div class="veriasVencidas"> 
+                
+                <h2>Férias Vencidas:</h2>
+
+                <input type="number" id="quantidade-ferias-vencida" placeholder="Quantidade férias vencida">
+                <input type="number" id="resultado-ferias-vencida" placeholder="Resultado" disabled>
+            
+                
+            </div>
+
+            <br>
+
+            <!--SALÁRIO FAMÍLIA-->
+            <div class="salarioFamilia"> 
+                
+                <h2>Salário Família:</h2>
+
+                <input type="number" id="quantidade-de-filhos" placeholder="Quantidade de filhos">
+                <input type="number" id="resultado-salario-familia" placeholder="Resultado" disabled>
+            
+                
+            </div>
+
+            <br>
+
+      
+            <!--Lei 12.506-->
+            <div class="Lei12506"> 
+                
+                <h2>Lei 12.506:</h2>
+
+                <input type="number" id="quantidade-anos-trabalhados" placeholder="Anos trabalhados">
+                <input type="number" id="resultado-12506" placeholder="Resultado" disabled>
+            
+                
+            </div>
+
+
+            <br>
+            <p>Total Bruto</p>
+            <input type="number" id="resultado-total-bruto" placeholder="Total bruto" disabled>
+
+            <br>
+
+        </section>
         <br>
 
         <button onclick=calcular()>Calcular</button>
-
+        
 
     </article>
     
