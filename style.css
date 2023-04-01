@@ -2,27 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Barlow:ital,wght@0,500;1,200&display=swap');
 
 header {
-    background-image: url(rescisao.jpg);
+    background-color: #0036357c;
     background-repeat: no-repeat;
-    display: table;
     width: 100%;
     height: 100%;
-    padding: 50px 0;
-    background-position: 30% 45%;
+    padding: 0 0 15px;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background: linear-gradient(#0036357c,#06537968);
+       
 }
 
 body {
-    background-color: #C8E8F7;
+    background-color: #06537968;
     display: table;
     width: 100%;
     height: 100%;
-    padding: 0 0;
+    padding: 0 0 0px 0;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(249, 245, 245);
     background-position: 30% 45%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -35,43 +32,27 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
-    color: #000000;
+    color: #fefdfd;
     font-weight: bolder;
 }
 
 p {
     text-align: center;
     font-size: 30px;
-    color: #000000;
+    color: #fcf8f8;
     font-family: 'Alkatra', cursive;
 }
 
 .lembrete {
     font-style: italic;
-    font-size: 25px;
-    color: #000000;
+    font-size: 15px;
+    color: #ffffff;
     font-family: 'Barlow', sans-serif;
 }
 
 h2 {    
-   font-size: 30px; 
+   font-size: 25px; 
    font-family: 'Barlow', sans-serif;
-}
-
-
-img {
-  display: table;
-  width: 100%;
-  height: 100%;
-  padding: 100px 0;
-  text-align: center;
-  color: white;
-  background-position: 30% 45%;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
 }
 
 #footer {
@@ -81,12 +62,80 @@ img {
     height: 2.5rem;            /* altura do rodapé */
     background-color: #53BDE1;
     
-  }
+}
 
-.copyrigth {
+.botaoCalcular {
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+a {
     color: #FFFFFF;
-    padding: 10px;
-    font-size: smaller;
+    text-decoration: none;
+    font-size: larger;
+    margin: 50px;
+    text-align:end;
+     
+}
 
+#areacalculo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 120px ;
+}
+
+#areaInformeSalarios {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 80px 45px 80px ;
+    font-size: 18px;
+}
+
+.areaInformeSalarios {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.imagemRescisao {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    
+}
+
+.totalBruto {
+    margin: 10px;
+}
+
+footer{
+    
+    background-color: #ffffff;
+    margin: auto auto;  
+    padding: 10px  500px;
+    bottom: 0;
+}
+
+.paragraFooter {
+    color: #000000;
+    padding: 10px 0 0 0;
+}
+
+.paragrafoemail {
+    color: #000000;
+    padding: 10px 0 0 0;
+    font-size: 15px;
+}
+
+.imagemrodape {
+    max-width: 100%;
+    width:100%;
+}
+
+.apresentacao__conteudo__texto {
+    color: #000000;
+    font-size:30px;
 }
 

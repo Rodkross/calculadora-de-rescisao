@@ -6,15 +6,21 @@ function calcular() {
     var diasTrabalhados = parseFloat(document.getElementById("diastrab").value);
     var avosDecimoTerceiro = parseFloat(document.getElementById("avos13").value);
     var avosFerias = parseFloat(document.getElementById("avosferias").value);
-    var resultadoFerias = parseFloat(document.getElementById("resultado-ferias").value);
     var quantidadeFeriasvencidas = parseFloat(document.getElementById("quantidade-ferias-vencida").value);
-    var resultadoFeriasVencida = parseFloat(document.getElementById("resultado-ferias-vencida").value);
-    var resultadoSalarioFamilia = parseFloat(document.getElementById("resultado-salario-familia").value);
     var quantidadeFilhos = parseFloat(document.getElementById("quantidade-de-filhos").value);
     var salarioFamiliaValor = 59.82
     var anosTrabalhados = parseFloat(document.getElementById("quantidade-anos-trabalhados").value);
-    var resultado12506 = parseFloat(document.getElementById("resultado-12506").value);
-    var resultadoTotalBruto = parseFloat(document.getElementById("resultado-total-bruto").value);
+    var valorAdiantamento = parseFloat(document.getElementById("adiantamento").value);
+    var valorErroDeCaixa = parseFloat(document.getElementById("erros-de-caixas").value);
+    var valorVale = parseFloat(document.getElementById("vale").value);
+    var aliquotaValeTransporte = parseFloat(document.getElementById("aliquotaValeTransporte").value);
+    var aliquotaInss = parseFloat(document.getElementById("aliquotaInss").value);
+    var aliquotaInss13 = parseFloat(document.getElementById("aliquotaInss13").value);
+    var diasRestantesMulta = parseFloat(document.getElementById("quantidade-dias-restantes").value); 
+
+    
+
+    // Vencimentos-------------
 
 
     //DIAS TRABALHADOS
@@ -99,12 +105,98 @@ function calcular() {
 
     //atribuir o resultado no campo de saída
     document.getElementById("resultado-12506").value = parseFloat(resultado12506); 
+    //-------------------------------------------------------------------
+
+
+    // Descontos ------------------
+
+
+    //ADIANTAMENTOS
+    // cálculo
+   
+    //arredondar o resultado em duas casas decimais
+    valorAdiantamento = valorAdiantamento.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("adiantamento").value = parseFloat(valorAdiantamento); 
     //------------------------------------------------------------------------------------
+
+
+
+    //ERROS DE CAIXA
+    // cálculo
+   
+    //arredondar o resultado em duas casas decimais
+    valorErroDeCaixa = valorErroDeCaixa.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("erros-de-caixas").value = parseFloat(valorErroDeCaixa); 
+    //------------------------------------------------------------------------------------
+
+
+
+    //VALES 
+    // cálculo
+   
+    //arredondar o resultado em duas casas decimais
+    valorVale = valorVale.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("vale").value = parseFloat(valorVale); 
+    //------------------------------------------------------------------------------------
+
+
+
+    //VALES TRANSPORTE 
+    // cálculo
+    var resultadoValeTransporte =  (parseFloat(aliquotaValeTransporte) / 100) * parseFloat(resultadiDiasTrabalhados);
+    //arredondar o resultado em duas casas decimais
+    resultadoValeTransporte = resultadoValeTransporte.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("desconto-vale-transporte").value = parseFloat(resultadoValeTransporte); 
+    //------------------------------------------------------------------------------------
+
+
+    //PREVIDENCIA SOCIAL
+    // cálculo
+    var resultadoInss =  (parseFloat(aliquotaInss) * parseFloat(resultadiDiasTrabalhados)) /100 ;
+    //arredondar o resultado em duas casas decimais
+    resultadoInss = resultadoInss.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("resultado-inss").value = parseFloat(resultadoInss); 
+    //------------------------------------------------------------------------------------
+
+
+
+    //INSS 13
+    // cálculo
+    var resultadoInss13 =  (parseFloat(aliquotaInss13) * parseFloat(resultadoDecimoTerceiro)) /100 ;
+    //arredondar o resultado em duas casas decimais
+    resultadoInss13 = resultadoInss13.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("resultado-inss-13").value = parseFloat(resultadoInss13); 
+    //------------------------------------------------------------------------------------
+
+
+    //MULTA TERMINO DE CONTRATO ANTECIPADO
+    // cálculo
+    var resultadoMultaTermino = (parseFloat(salarioBase) / 30) * parseFloat(diasRestantesMulta) / 2;
+    //arredondar o resultado em duas casas decimais
+    resultadoMultaTermino = resultadoMultaTermino.toFixed(2);
+
+    //atribuir o resultado no campo de saída
+    document.getElementById("resultado-dias-restantes").value = parseFloat(resultadoMultaTermino); 
+    //------------------------------------------------------------------------------------
+
+
 
 
     //TOTAL BRUTO
     // cálculo
-    var resultadoTotalBruto =  parseFloat(resultadiDiasTrabalhados) + parseFloat(resultadoDecimoTerceiro) + parseFloat(resultadoFerias) + parseFloat(resultadoTercoFerias) + parseFloat(resultadoFeriasVencida) + parseFloat(resultadoSalarioFamilia) + parseFloat(resultado12506);
+    var resultadoTotalBruto =  parseFloat(resultadiDiasTrabalhados) + parseFloat(resultadoDecimoTerceiro) + parseFloat(resultadoFerias) + parseFloat(resultadoTercoFerias) + parseFloat(resultadoFeriasVencida) + parseFloat(resultadoSalarioFamilia) + parseFloat(resultado12506) - parseFloat(valorAdiantamento) - parseFloat(valorErroDeCaixa) - parseFloat(valorVale) - parseFloat(resultadoValeTransporte) - parseFloat(resultadoInss) - parseFloat(resultadoInss13);
 
     //arredondar o resultado em duas casas decimais
     resultadoTotalBruto = resultadoTotalBruto.toFixed(2);
